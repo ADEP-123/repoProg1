@@ -1,6 +1,6 @@
-const ej20 = /*html*/`
-<h1>Ejercicio 20</h1>
-<p>Imprimiendo numeros de 0 a 100</p>
+const ej21 = /*html*/`
+<h1>Ejercicio 21</h1>
+<p>Imprimiendo numeros con condicion 0 <= 100</p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
@@ -15,11 +15,11 @@ const ej20 = /*html*/`
     
       // Imprimir encabezados de columna
       cout << "+-----------+" << endl;
-      cout << "|  Numeros  |" << endl;
+      cout << "| 0 <= 100  |" << endl;
       cout << "+-----------+" << endl;
     
       // Imprimir números del 1 al 100 en la tabla
-      for (int i = 1; i <= 100; i++) {
+      for (int i = 0; i <= 100; i++) {
         // Imprimir fila de datos
         if (i < 10) {
           cout << "| " << i << "        | ";
@@ -42,8 +42,9 @@ const ej20 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/ej20.png" id="img_res">
+    <img src="./../imgs/ej21.png" id="img_res">
+    <img src="./../imgs/ej21_2.png" id="img_res">
 </div>
 
 `;
-export default ej20
+export default ej21
