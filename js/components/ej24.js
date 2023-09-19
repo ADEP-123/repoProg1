@@ -5,38 +5,37 @@ const ej24 = /*html*/`
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
-        #include <cmath>
-        #include <iostream>
-        #include <string>
-        using namespace std;
-
-        int main() {
-          cout << "Tabla de Números del 1 al 100" << endl;
-        
-          // Imprimir encabezados de columna
-          cout << "+-----------+" << endl;
-          cout << "|  1 <  100 |" << endl;
-          cout << "+-----------+" << endl;
-        
-          // Imprimir números del 1 al 100 en la tabla
-          for (int i = 1; i < 100; i++) {
-            // Imprimir fila de datos
-            if (i < 10) {
-              cout << "| " << i << "        | ";
-            } else if (i < 100) {
-              cout << "| " << i << "       | ";
-            } else {
-              cout << "| " << i << "      | ";
-            }
-        
-            cout << std::endl;
-          }
-      
-          // Imprimir línea inferior de la tabla
-          cout << "+----------+" << endl;
-      
-          return 0;
+    #include <cmath>
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    int main() {
+      cout << "Tabla de Números del 1 al 100" << endl;
+    
+      // Imprimir encabezados de columna
+      cout << "+-----------+" << endl;
+      cout << "|  1 <  100 |" << endl;
+      cout << "+-----------+" << endl;
+    
+      // Imprimir números del 1 al 100 en la tabla
+      for (int i = 1; i < 100; i++) {
+        // Imprimir fila de datos
+        if (i < 10) {
+          cout << "| " << i << "        | ";
+        } else if (i < 100) {
+          cout << "| " << i << "       | ";
+        } else {
+          cout << "| " << i << "      | ";
         }
+    
+        cout << std::endl;
+      }
+    
+      // Imprimir línea inferior de la tabla
+      cout << "+----------+" << endl;
+    
+      return 0;
+    }
     </code>
 </pre>
 </div>
