@@ -1,3 +1,4 @@
+import config from "../config.js";
 const ej21 = /*html*/`
 <h1>Ejercicio 21</h1>
 <p>Imprimiendo numeros con condicion 0 <= 100</p>

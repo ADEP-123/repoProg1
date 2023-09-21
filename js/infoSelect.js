@@ -1,5 +1,5 @@
 import infoHome from "./components/info.js";
-
+import config from "./config.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     const info = document.getElementById("info")
