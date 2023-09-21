@@ -44,6 +44,9 @@ const ej24 = /*html*/`
     <h5>Resultado</h5>
     <img src="./../imgs/ej24.png" id="img_res">
     <img src="./../imgs/ej24_2.png" id="img_res">
+
+    <!-- <img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/ej24.png" id="img_res"> -->
+    <!-- <img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/ej24_2.png" id="img_res"> -->
 </div>
 
 `;

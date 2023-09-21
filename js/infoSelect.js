@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     info.innerHTML = /*html*/`
                     <h1>Estamos trabajando en esta seccion</h1>
                     <img src="../imgs/roborError.gif"></img>
+                    <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/roborError.gif"></img>-->
                     `;
                 });
 
