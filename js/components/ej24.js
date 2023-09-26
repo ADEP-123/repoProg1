@@ -6,6 +6,7 @@ const ej24 = /*html*/`
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
+    <script type="text/x-c++src">
     #include <cmath>
     #include <iostream>
     #include <string>
@@ -37,6 +38,7 @@ const ej24 = /*html*/`
     
       return 0;
     }
+    </script>
     </code>
 </pre>
 </div>

@@ -5,6 +5,7 @@ const ej32 = /*html*/`
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
+    <script type="text/x-c++src">
     #include <iostream>
 
     using namespace std;
@@ -26,7 +27,8 @@ const ej32 = /*html*/`
         }
     
         return 0;
-    } 
+    }
+    </script> 
     </code>
 </pre>
 </div>

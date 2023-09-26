@@ -3,7 +3,8 @@ const ej31 = /*html*/`
 <p>Tabla de multiplicar</p>
 <div id="codigo">
 <pre class="code-container">
-    <button class="copy-button">Copiar</button>
+    <button class="copy-button">Cop
+    <script type="text/x-c++src">iar</button>
     <code class="language-cpp">
     #include <iostream>
 
@@ -46,7 +47,7 @@ const ej31 = /*html*/`
       return 0;
     }
     
-    
+    </script>
     </code>
 </pre>
 </div>

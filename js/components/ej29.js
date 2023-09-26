@@ -5,6 +5,7 @@ const ej29 = /*html*/`
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
+    <script type="text/x-c++src">
     #include <chrono>
     #include <iostream>
     #include <thread>
@@ -26,6 +27,7 @@ const ej29 = /*html*/`
     
       return 0;
     }
+    </script>
     </code>
 </pre>
 </div>
