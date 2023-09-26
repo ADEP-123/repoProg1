@@ -1,5 +1,5 @@
 const ej39 = /*html*/`
-<h1>Ejercicio 38</h1>
+<h1>Ejercicio 39</h1>
 <p>Conteo de elementos</p>
 <div id="codigo">
 <pre class="code-container">
