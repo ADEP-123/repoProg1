@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let promedioEventExist = false
     let vocEventExist = false
     let adivEventExist = false
+    let contrEventExist = false
 
     info.addEventListener("click", (event) => {
         event.stopPropagation()
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formularioProm = document.getElementById("promForm")
         const formularioVoc = document.getElementById("contVocForm")
         const formularioAdiv = document.getElementById("adivForm")
+        const formularioContr = document.getElementById("contrForm")
 
         if (formularioIMc) {
             if (imcEventExist == false) {
@@ -377,6 +379,42 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
             adivEventExist = true
+        }
+        if (formularioContr) {
+            if (contrEventExist == false) {
+                const buttonChange = document.getElementById("changeVis");
+                const passInput = document.getElementById("pass")
+                const result = document.getElementById("result")
+                let actualType = passInput.type
+                let actualPlaceHolder = passInput.placeholder;
+                buttonChange.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if (actualType == "text") {
+                        passInput.type = "password"
+                        buttonChange.innerHTML = "&#9746"
+                        passInput.placeholder = "**********"
+                    } else {
+                        passInput.type = "text"
+                        buttonChange.innerHTML = "&#128065;"
+                        passInput.placeholder = "testing123"
+                    }
+                    actualType = passInput.type
+                    actualPlaceHolder = passInput.placeholder
+                })
+
+                formularioContr.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if (passInput.value != "testing123") {
+                        alert("Ups esa no es la contraseña")
+                        passInput.value = null
+                    } else {
+                        result.innerHTML = "Usuario loggeado :3"
+                    }
+                });
+            }
+            contrEventExist = true
         }
 
     })
