@@ -1,5 +1,5 @@
 const pf10 = /*html*/`
-<h1>Ejercicio 9 for</h1>
+<h1>Ejercicio 10 For</h1>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
