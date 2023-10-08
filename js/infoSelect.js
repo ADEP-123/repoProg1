@@ -467,14 +467,8 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", (e) => {
             e.preventDefault();
             e.stopPropagation();
-            let moduleName;
-            console.log();
-            if (isNaN(Number(button.value)) == false) {
-                moduleName = `ej${button.value}`;
-            } else {
-                moduleName = `${button.value}`;
-            }
-
+            const moduleName = `${button.value}`;
+            
             import(`./components/${moduleName}.js`)
                 .then((modul) => {
                     info.innerHTML = modul.default;
