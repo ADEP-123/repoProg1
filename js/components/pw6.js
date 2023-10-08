@@ -1,5 +1,5 @@
 const pw6 = /*html*/`
-<h1>Ejercicio 5 While</h1>
+<h1>Ejercicio 6 While</h1>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
