@@ -1,6 +1,5 @@
 const pf1 = /*html*/`
-<h1>Ejercicio 20</h1>
-<p>Imprimiendo numeros de 0 a 100</p>
+<h1>Ejercicio 1 for</h1>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
@@ -8,9 +7,9 @@ const pf1 = /*html*/`
         <script type="text/plain">
             #include <iomanip>
             #include <iostream>
-            
+
             using namespace std;
-            
+
             int main() {
               int numVentas;
               double totalVentas = 0.0;
