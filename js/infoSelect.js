@@ -6,12 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
     info.innerHTML = infoHome
     const homebutton = document.getElementById("home_button_link")
     const sidebarButtons = document.querySelectorAll("#sidebar button");
-    let eventExist = false
+    let imcEventExist = false
+    let triangEventExist = false
+
     info.addEventListener("click", (event) => {
         event.stopPropagation()
         const formularioIMc = document.getElementById("formularioIMC");
+        const formularioTriang = document.getElementById("formularioTriang")
         if (formularioIMc) {
-            if (eventExist == false) {
+            if (imcEventExist == false) {
                 formularioIMc.addEventListener("submit", (event) => {
                     event.preventDefault();
                     event.stopPropagation();
@@ -46,12 +49,51 @@ document.addEventListener("DOMContentLoaded", function () {
                         const result = document.getElementById("result")
                         result.value = pesoValue / (estaturaValue * estaturaValue)
                     }
-
+                    imcEventExist = true
                 });
             }
 
+
         }
-        eventExist = true
+        if (formularioTriang) {
+            if (triangEventExist == false) {
+                formularioTriang.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const cateto1 = document.getElementById("cat1")
+                    const cateto2 = document.getElementById("cat2")
+                    let ok = true;
+                    if (isNaN(cateto1.value) == true) {
+                        alert("El cateto 1 debe ser numerico")
+                        cateto1.value = null
+                        ok = false
+                    }
+                    if (isNaN(cateto2.value)) {
+                        alert("El cateto 2 debe ser numerico")
+                        cateto2.value = null
+                        ok = false
+                    }
+                    const cateto1Value = Number(cateto1.value)
+                    const cateto2Value = Number(cateto2.value)
+                    if (cateto1Value < 0 || cateto2Value < 0) {
+                        alert("Los catetos deben ser positivos")
+                        cateto1.value = null
+                        cateto2.value = null
+                        ok = false
+                    }
+                    if (ok == true) {
+                        const area = document.getElementById("area")
+                        const perimetro = document.getElementById("perimetro")
+                        area.value = (cateto1Value * cateto2Value) / 2;
+                        const hip = Math.sqrt((cateto1Value * cateto1Value) + (cateto2Value * cateto2Value));
+                        perimetro.value = cateto1Value + cateto2Value + hip
+                    }
+                    triangEventExist = true
+                });
+            }
+        }
+
     })
 
     sidebarButtons.forEach((button) => {
@@ -60,11 +102,10 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             e.stopPropagation();
             let moduleName;
-            if (button.value == "imc") {
-                moduleName = `${button.value}`;
-            } else {
-
+            if (isNaN(button.value) == false) {
                 moduleName = `ej${button.value}`;
+            } else {
+                moduleName = `${button.value}`;
             }
 
 
