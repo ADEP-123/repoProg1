@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let tablMulEventExist = false
     let promedioEventExist = false
     let vocEventExist = false
+    let adivEventExist = false
 
     info.addEventListener("click", (event) => {
         event.stopPropagation()
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formularioTabl = document.getElementById("tablMulForm")
         const formularioProm = document.getElementById("promForm")
         const formularioVoc = document.getElementById("contVocForm")
+        const formularioAdiv = document.getElementById("adivForm")
 
         if (formularioIMc) {
             if (imcEventExist == false) {
@@ -334,6 +336,47 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
             vocEventExist = true
+        }
+        if (formularioAdiv) {
+            if (adivEventExist == false) {
+                let randNum = Math.floor(Math.random() * 100) + 1;
+                const cambNumButt = document.getElementById("camb_num")
+                cambNumButt.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    randNum = Math.floor(Math.random() * 100) + 1;
+                })
+
+                formularioAdiv.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const numero = document.getElementById("numero")
+                    let ok = true;
+                    if (numero.value < 1 || numero > 100) {
+                        alert("El numero debe ser mayor o igual a uno y menor o igual a 100")
+                        numero.value = null
+                        ok = false
+                    }
+                    const numeroValue = numero.value
+                    if (ok == true) {
+                        const resul = document.getElementById("result")
+                        if (numeroValue == randNum) {
+                            resul.innerHTML =/*html*/`Felicidades ha adivinado el numero, generando nuevo numero espere`
+                            setTimeout(function () {
+                                randNum = Math.floor(Math.random() * 100) + 1;
+                                resul.innerHTML =/*html*/``;
+                            }, 3000);
+                        } else if (numeroValue < randNum) {
+                            resul.innerHTML =/*html*/`Ups te fuiste muy bajo`
+                        } else {
+                            resul.innerHTML =/*html*/`Ups te fuiste muy alto`
+                        }
+                    }
+
+                });
+            }
+            adivEventExist = true
         }
 
     })
