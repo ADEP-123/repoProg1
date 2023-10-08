@@ -6,13 +6,15 @@ document.addEventListener("DOMContentLoaded", function () {
     info.innerHTML = infoHome
     const homebutton = document.getElementById("home_button_link")
     const sidebarButtons = document.querySelectorAll("#sidebar button");
-    let imcEventExist = false
-    let triangEventExist = false
+    let imcEventExist = false;
+    let triangEventExist = false;
+    let mayEdadEventExist = false;
 
     info.addEventListener("click", (event) => {
         event.stopPropagation()
         const formularioIMc = document.getElementById("formularioIMC");
         const formularioTriang = document.getElementById("formularioTriang")
+        const formularioMayEdad = document.getElementById("mayEdadform")
         if (formularioIMc) {
             if (imcEventExist == false) {
                 formularioIMc.addEventListener("submit", (event) => {
@@ -90,6 +92,42 @@ document.addEventListener("DOMContentLoaded", function () {
                         perimetro.value = cateto1Value + cateto2Value + hip
                     }
                     triangEventExist = true
+                });
+            }
+        }
+        if (formularioMayEdad) {
+            if (mayEdadEventExist == false) {
+                formularioMayEdad.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const edad = document.getElementById("edad")
+                    let ok = true;
+                    if (isNaN(edad.value) == true) {
+                        alert("La edad debe ser un numero")
+                        cateto1.value = null
+                        ok = false
+                    }
+                    const edadValue = Number(edad.value)
+                    if (edadValue <= 0) {
+                        alert("Los edad debe ser positiva")
+                        edad.value = null
+                        ok = false
+                    }
+                    if (edadValue > 118) {
+                        alert("O usted es la persona mas vieja del mundo o se equivocó")
+                        edad.value = null
+                        ok = false
+                    }
+                    if (ok == true) {
+                        const result = document.getElementById("result")
+                        if (edadValue < 18) {
+                            result.innerHTML = "Usted es menor de edad"
+                        } else {
+                            result.innerHTML = "Usted es mayor de edad"
+                        }
+                    }
+                    mayEdadEventExist = true
                 });
             }
         }
