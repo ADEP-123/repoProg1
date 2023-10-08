@@ -446,6 +446,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     coheteGif.src = "./../imgs/coete.png"
                                     // coheteGif.src = "https://adepfolder.000webhostapp.com/Programacion%201/imgs/coete.png"
                                     result.innerHTML = ""
+                                    numberInput.value = null;
                                 }, 5000);
                             } else {
                                 result.innerHTML = number;
