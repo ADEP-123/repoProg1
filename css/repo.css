@@ -193,3 +193,6 @@ pre{
     flex-direction: column;
     align-items: center;
 }
+#calculadora select{
+    background-color: #212121;
+}

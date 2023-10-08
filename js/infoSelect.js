@@ -9,12 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let imcEventExist = false;
     let triangEventExist = false;
     let mayEdadEventExist = false;
+    let helEventExist = false;
 
     info.addEventListener("click", (event) => {
         event.stopPropagation()
         const formularioIMc = document.getElementById("formularioIMC");
         const formularioTriang = document.getElementById("formularioTriang")
         const formularioMayEdad = document.getElementById("mayEdadform")
+        const formularioHel = document.getElementById("formularioHel")
         if (formularioIMc) {
             if (imcEventExist == false) {
                 formularioIMc.addEventListener("submit", (event) => {
@@ -128,6 +130,35 @@ document.addEventListener("DOMContentLoaded", function () {
                         }
                     }
                     mayEdadEventExist = true
+                });
+            }
+        }
+        if (formularioHel) {
+            if (helEventExist == false) {
+                formularioHel.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const tipCliente = document.getElementById("tipClient");
+                    const totVent = document.getElementById("totVent");
+                    let ok = true;
+                    if (isNaN(totVent.value) == true) {
+                        alert("El total de la venta debe ser un numero")
+                        totVent.value = null
+                        ok = false
+                    }
+                    const totVentValue = Number(totVent.value)
+                    const porDescuento = tipCliente.value
+                    if (totVentValue <= 0) {
+                        alert("El total de la venta debe ser positiva")
+                        totVent.value = null
+                        ok = false
+                    }
+                    if (ok == true) {
+                        const result = document.getElementById("totVentDesc")
+                        result.value = totVentValue - (totVentValue * porDescuento)
+                    }
+                    helEventExist = true
                 });
             }
         }
