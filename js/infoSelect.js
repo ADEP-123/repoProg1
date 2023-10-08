@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let helEventExist = false;
     let tablMulEventExist = false
     let promedioEventExist = false
+    let vocEventExist = false
 
     info.addEventListener("click", (event) => {
         event.stopPropagation()
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formularioHel = document.getElementById("formularioHel")
         const formularioTabl = document.getElementById("tablMulForm")
         const formularioProm = document.getElementById("promForm")
+        const formularioVoc = document.getElementById("contVocForm")
 
         if (formularioIMc) {
             if (imcEventExist == false) {
@@ -275,6 +277,63 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
             promedioEventExist = true
+        }
+        if (formularioVoc) {
+            if (vocEventExist == false) {
+                formularioVoc.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const frase = document.getElementById("frase")
+                    let ok = true;
+                    if (!frase.value) {
+                        alert("Debe escribir la frase")
+                        ok = false
+                    }
+                    const fraseValue = frase.value
+                    let contA = 0; let contE = 0; let contI = 0; let contO = 0; let contU = 0;
+                    for (let i = 0; i < fraseValue.length; i++) {
+                        if (fraseValue[i].toLowerCase() == "a") {
+                            contA++
+                        }
+                        if (fraseValue[i].toLowerCase() == "e") {
+                            contE++
+                        }
+                        if (fraseValue[i].toLowerCase() == "i") {
+                            contI++
+                        }
+                        if (fraseValue[i].toLowerCase() == "o") {
+                            contO++
+                        }
+                        if (fraseValue[i].toLowerCase() == "u") {
+                            contU++
+                        }
+                    }
+                    if (ok == true) {
+                        const resultDiv = document.getElementById("result_div")
+                        resultDiv.innerHTML =/*html*/`
+                        <table>
+                            <tr>
+                                <th>a</th>
+                                <th>e</th>
+                                <th>i</th>
+                                <th>o</th>
+                                <th>u</th>
+                            </tr>
+                            <tr>
+                                <td>${contA}</td>
+                                <td>${contE}</td>
+                                <td>${contI}</td>
+                                <td>${contO}</td>
+                                <td>${contU}</td>
+                            </tr>
+                        </table>
+                        `
+                    }
+
+                });
+            }
+            vocEventExist = true
         }
 
     })

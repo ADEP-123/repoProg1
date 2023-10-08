@@ -234,3 +234,7 @@ pre{
         padding: 8px;
         text-align: center;
 }
+#calculadora textarea{
+    background-color: #212121;
+    color: white;
+}
