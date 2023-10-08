@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let triangEventExist = false;
     let mayEdadEventExist = false;
     let helEventExist = false;
+    let tablMulEventExist = false
 
     info.addEventListener("click", (event) => {
         event.stopPropagation()
@@ -17,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const formularioTriang = document.getElementById("formularioTriang")
         const formularioMayEdad = document.getElementById("mayEdadform")
         const formularioHel = document.getElementById("formularioHel")
+        const formularioTabl = document.getElementById("tablMulForm")
+
         if (formularioIMc) {
             if (imcEventExist == false) {
                 formularioIMc.addEventListener("submit", (event) => {
@@ -157,6 +160,48 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (ok == true) {
                         const result = document.getElementById("totVentDesc")
                         result.value = totVentValue - (totVentValue * porDescuento)
+                    }
+                    helEventExist = true
+                });
+            }
+        }
+        if (formularioTabl) {
+            if (tablMulEventExist == false) {
+                formularioTabl.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const numero = document.getElementById("number");
+                    let ok = true;
+                    if (isNaN(numero.value) == true) {
+                        alert("El numero de la tabla debe ser un numero")
+                        numero.value = null
+                        ok = false
+                    }
+                    const numeroValue = Number(numero.value)
+                    if (numeroValue <= 0) {
+                        alert("El numero debe ser positivo")
+                        numero.value = null
+                        ok = false
+                    }
+                    if (ok == true) {
+                        const resultDiv = document.getElementById("result_div")
+                        let cont = /*html*/`
+                        <tr>
+                            <th>Operacion</th>
+                            <th>Resultado</th>
+                        </tr>`
+                        for (let i = 1; i < 11; i++) {
+                            cont +=/*html*/`
+                            <tr>
+                                <td>${numeroValue} * ${i}</td>
+                                <td>${numeroValue * i}</td>
+                            </tr>`
+                        }
+                        resultDiv.innerHTML = /*html*/`
+                        <table border="1">
+                            ${cont}
+                        </table>`
                     }
                     helEventExist = true
                 });
