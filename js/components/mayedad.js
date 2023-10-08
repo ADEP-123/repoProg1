@@ -3,7 +3,7 @@ const mayedad = /*html*/`
 <div id=div_info>
 <img src="./../imgs/crecer.gif" id="img_imc">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/crecer.gif" id="img_imc"> -->
-<p>Calculadora pasa saber si usted es mayor de edad segun la legislacion colombiana. En colombia se es mayor a partir de los 18</p>
+<p>Calculadora para saber si usted es mayor de edad segun la legislacion colombiana. En colombia se es mayor a partir de los 18</p>
 </div>
 
 <div id=calculadora>

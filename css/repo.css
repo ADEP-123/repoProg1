@@ -22,9 +22,6 @@ input, button{
 button{
     padding: 1%;
 }
-button :hover{
-    box-shadow: 1px 1px 1px white;
-}
 
 /* 1. Barra de navegacion */
 #navbar{
@@ -128,11 +125,20 @@ pre{
 #sidebar{
     border-radius: 10px;
     overflow-y: scroll;
-    font-size: 1.4vh;
-    width: 0%; /* Inicialmente oculto */
-    transition: 0.3s; /* Agrega una transición suave */
-    
+    width: 0%; 
+    transition: 0.3s; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 1.4vw; 
 }
+ @media screen and (max-width: 950px) {
+    #sidebar{
+        font-size: 2.3vw;
+    }
+} 
+
 #sidebar button{
     background-color: #212121;
     padding: 0%;
@@ -195,4 +201,12 @@ pre{
 }
 #calculadora select{
     background-color: #212121;
+}
+
+#calculadora button:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 1px 5px 5px white;
+    transition: 0.7s;
+
 }
