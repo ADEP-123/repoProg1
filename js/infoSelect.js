@@ -468,13 +468,12 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             e.stopPropagation();
             let moduleName;
-            if (isNaN(button.value) == false) {
+            console.log();
+            if (isNaN(Number(button.value)) == false) {
                 moduleName = `ej${button.value}`;
             } else {
                 moduleName = `${button.value}`;
             }
-
-
 
             import(`./components/${moduleName}.js`)
                 .then((modul) => {
