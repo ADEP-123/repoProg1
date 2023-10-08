@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let vocEventExist = false
     let adivEventExist = false
     let contrEventExist = false
+    let coheteEventExist = false
 
     info.addEventListener("click", (event) => {
         event.stopPropagation()
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formularioVoc = document.getElementById("contVocForm")
         const formularioAdiv = document.getElementById("adivForm")
         const formularioContr = document.getElementById("contrForm")
+        const formularioCohete = document.getElementById("coheteForm")
 
         if (formularioIMc) {
             if (imcEventExist == false) {
@@ -416,6 +418,46 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             contrEventExist = true
         }
+        if (formularioCohete) {
+            if (coheteEventExist == false) {
+                const coheteGif = document.getElementById("cohete");
+                const numberInput = document.getElementById("numero");
+                const result = document.getElementById("result");
+                const formularioCohete = document.getElementById("coheteForm");
+
+                formularioCohete.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    if (numberInput.value <= 0) {
+                        alert("Ups, el número de partida debe ser mayor a 0");
+                        numberInput.value = null;
+                    } else {
+                        let number = numberInput.value;
+                        result.innerHTML = "Iniciando Despegue!";
+
+                        const countdownInterval = setInterval(() => {
+                            if (number === 0) {
+                                clearInterval(countdownInterval);
+                                result.innerHTML = "Despegando!";
+                                coheteGif.src = "./../imgs/coete.gif"
+                                // coheteGif.src = "https://adepfolder.000webhostapp.com/Programacion%201/imgs/coete.gif"
+                                setTimeout(function () {
+                                    coheteGif.src = "./../imgs/coete.png"
+                                    // coheteGif.src = "https://adepfolder.000webhostapp.com/Programacion%201/imgs/coete.png"
+                                    result.innerHTML = ""
+                                }, 5000);
+                            } else {
+                                result.innerHTML = number;
+                                number--;
+                            }
+                        }, 1000);
+                    }
+                });
+            }
+            coheteEventExist = true
+        }
+
 
     })
 

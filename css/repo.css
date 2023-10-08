@@ -238,3 +238,7 @@ pre{
     background-color: #212121;
     color: white;
 }
+#cohete {
+    width: 30vw;
+    border-radius: 60%;
+}
