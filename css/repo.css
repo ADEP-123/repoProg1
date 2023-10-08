@@ -225,9 +225,12 @@ pre{
     width: 50%;
     
 }
-#result_div th, td {
+#result_div th, #result_div td {
     border: 0.5px solid rgb(255, 255, 255);
     padding: 8px;
-    text-align: left;
     text-align: center;
+}
+#question_form td{
+        padding: 8px;
+        text-align: center;
 }

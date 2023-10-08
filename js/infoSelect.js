@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let mayEdadEventExist = false;
     let helEventExist = false;
     let tablMulEventExist = false
+    let promedioEventExist = false
 
     info.addEventListener("click", (event) => {
         event.stopPropagation()
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formularioMayEdad = document.getElementById("mayEdadform")
         const formularioHel = document.getElementById("formularioHel")
         const formularioTabl = document.getElementById("tablMulForm")
+        const formularioProm = document.getElementById("promForm")
 
         if (formularioIMc) {
             if (imcEventExist == false) {
@@ -56,11 +58,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         const result = document.getElementById("result")
                         result.value = pesoValue / (estaturaValue * estaturaValue)
                     }
-                    imcEventExist = true
+
                 });
             }
-
-
+            imcEventExist = true
         }
         if (formularioTriang) {
             if (triangEventExist == false) {
@@ -96,9 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         const hip = Math.sqrt((cateto1Value * cateto1Value) + (cateto2Value * cateto2Value));
                         perimetro.value = cateto1Value + cateto2Value + hip
                     }
-                    triangEventExist = true
+
                 });
             }
+            triangEventExist = true
         }
         if (formularioMayEdad) {
             if (mayEdadEventExist == false) {
@@ -132,9 +134,10 @@ document.addEventListener("DOMContentLoaded", function () {
                             result.innerHTML = "Usted es mayor de edad"
                         }
                     }
-                    mayEdadEventExist = true
+
                 });
             }
+            mayEdadEventExist = true
         }
         if (formularioHel) {
             if (helEventExist == false) {
@@ -161,9 +164,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         const result = document.getElementById("totVentDesc")
                         result.value = totVentValue - (totVentValue * porDescuento)
                     }
-                    helEventExist = true
+
                 });
             }
+            helEventExist = true
         }
         if (formularioTabl) {
             if (tablMulEventExist == false) {
@@ -203,9 +207,74 @@ document.addEventListener("DOMContentLoaded", function () {
                             ${cont}
                         </table>`
                     }
-                    helEventExist = true
                 });
             }
+            tablMulEventExist = true
+        }
+        if (formularioProm) {
+            if (promedioEventExist == false) {
+                formularioProm.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const minimo = document.getElementById("notMin");
+                    const maximo = document.getElementById("notMax");
+                    const nota1 = document.getElementById("not1");
+                    const nota2 = document.getElementById("not2");
+                    const nota3 = document.getElementById("not3");
+                    const nota4 = document.getElementById("not4");
+                    const nota5 = document.getElementById("not5");
+                    let ok = true;
+                    const minimoValue = Number(minimo.value);
+                    const maximoValue = Number(maximo.value);
+                    const nota1Value = Number(nota1.value);
+                    const nota2Value = Number(nota2.value);
+                    const nota3Value = Number(nota3.value);
+                    const nota4Value = Number(nota4.value);
+                    const nota5Value = Number(nota5.value);
+                    if (minimoValue < 0 || maximoValue < 0) {
+                        alert("Los limites deben ser positivos")
+                        minimo.value = null;
+                        maximo.value = null;
+                        ok = false
+                    }
+                    if (minimoValue >= maximoValue) {
+                        alert("El limite inferior debe ser menor al mayor")
+                        minimo.value = null;
+                        ok = false
+                    }
+                    if (nota1Value < minimoValue || nota1Value > maximoValue) {
+                        alert("La nota 1 es menor que el valor minimo o mayor que el valor maximo")
+                        nota1.value = null;
+                        ok = false
+                    }
+                    if (nota2Value < minimoValue || nota2Value > maximoValue) {
+                        alert("La nota 2 es menor que el valor minimo o mayor que el valor maximo")
+                        nota2.value = null;
+                        ok = false
+                    }
+                    if (nota3Value < minimoValue || nota3Value > maximoValue) {
+                        alert("La nota 3 es menor que el valor minimo o mayor que el valor maximo")
+                        nota3.value = null;
+                        ok = false
+                    }
+                    if (nota4Value < minimoValue || nota4Value > maximoValue) {
+                        alert("La nota 4 es menor que el valor minimo o mayor que el valor maximo")
+                        nota4.value = null;
+                        ok = false
+                    }
+                    if (nota5Value < minimoValue || nota5Value > maximoValue) {
+                        alert("La nota 5 es menor que el valor minimo o mayor que el valor maximo")
+                        nota5.value = null;
+                        ok = false
+                    }
+                    if (ok == true) {
+                        const result = document.getElementById("result")
+                        result.innerHTML =/*html*/`El resultado es ${(nota1Value + nota2Value + nota3Value + nota4Value + nota5Value) / 5}`
+                    }
+                });
+            }
+            promedioEventExist = true
         }
 
     })
