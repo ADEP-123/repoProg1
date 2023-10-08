@@ -14,6 +14,18 @@ body{
     
 }
 
+input, button{
+    background-color: #212121;  
+    border: 1px solid white;
+    color: white;
+}
+button{
+    padding: 1%;
+}
+button :hover{
+    box-shadow: 1px 1px 1px white;
+}
+
 /* 1. Barra de navegacion */
 #navbar{
     height: 15%; 
@@ -137,6 +149,10 @@ pre{
     margin: 0;
     padding: 0;
 }
+#sidebar li :hover{
+    box-shadow: 2px 5px 5px white;
+}
+
 
 /* 2.2.2 contact info div */
 #contact_info_div{
@@ -154,4 +170,27 @@ pre{
 }
 #contact_info_text{
     font-size: 1.3vh;
+}
+
+/* Pagina IMC */
+#div_info{
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#img_imc{
+    width: 30vw;
+}
+#calculadora{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#calculadora form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
