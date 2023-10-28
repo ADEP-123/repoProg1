@@ -1,5 +1,5 @@
 const ej47 = /*html*/`
-<h1>Ejercicio 7 While</h1>
+<h1>Ejercicio 47 Array 1</h1>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
@@ -7,7 +7,7 @@ const ej47 = /*html*/`
         <script type="text/plain">
             #include <iostream>
             using namespace std;
-            
+
             int main() {
               cout << "Funcionamiento de las posiciones de un array" << endl;
               cout << endl;
