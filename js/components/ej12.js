@@ -1,7 +1,7 @@
 import config from "../config.js";
 const ej12 = /*html*/`
 <h1>Ejercicio 12</h1>
-<p>rograma que al ingresar 3 números los ordene y los imprima preguntando de mayor a menor o de menor a mayor</p>
+<p>Programa que al ingresar 3 números los ordene y los imprima preguntando de mayor a menor o de menor a mayor</p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
@@ -10,7 +10,7 @@ const ej12 = /*html*/`
       #include <cmath>
       #include <iostream>
       using namespace std;
-      
+
       int main() {
       
         // Declaracion de variables
