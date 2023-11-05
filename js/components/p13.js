@@ -1,5 +1,5 @@
 import config from "../config.js";
-const p12 = /*html*/`
+const p13 = /*html*/`
 <h1>Parcial 1: Ejercicio 3</h1>
 <p>El efecto doppler es una variación aparente del efecto ondulatorio debido al movimiento entre el observador y el emisor:   </p>
 <img src="./../imgs/p1ej3.png" id="img_res">
@@ -180,9 +180,9 @@ const p12 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/p12.png" id="img_res">
-    <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p12.png" id="img_res"> -->
+    <img src="./../imgs/p13.png" id="img_res">
+    <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p13.png" id="img_res"> -->
 </div>
 
 `;
-export default p12
+export default p13
