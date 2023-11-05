@@ -13,20 +13,25 @@ const ej6 = /*html*/`
       using namespace std;
       
       int main() {
-        // Declaracion de variables
-        double k;
+        // Declaración de variables
+        string n;
+        double p;
       
-        // Asignacion de variables
-        cout << "Ingrese la temperatura en grados kelvin: ";
-        cin >> k;
+        // Asignación de variables
+        cout << "Ingrese el nombre del producto: ";
+        cin >> n;
       
-        if(k<0){
-          cout<<"Los grados Kelvin no pueden ser negativos";
-        }else{  
-        cout << "Los grados Centigrados son: " << (k - 273.15);
+        cout << "Ingrese el precio del producto sin IVA: $";
+        cin >> p;
+      
+        if (p < 0) {
+          cout << "El precio del producto debe ser mayor a 0";
+        } else {
+          cout << "Factura:" << endl
+               << "Producto: " << n << endl
+               << "Precio sin IVA: " << p << endl
+               << "Precio con IVA(19%): $" << p * 1.19;
         }
-      
-      
         return 0;
       }
     </script>
