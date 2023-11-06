@@ -1,6 +1,6 @@
 const ej74 = /*html*/`
 <h1>Ejercicio 74: Ejercicio 17 Matrices</h1>
-<p style="text-align: justify;">4.	Dada una matriz cuadrada A (n x n), realiza dos operaciones:
+<p style="text-align: justify;">Dada una matriz cuadrada A (n x n), realiza dos operaciones:
   <br>-Encuentra la matriz traspuesta de A.
   <br>-Calcula la multiplicación de A por su propia traspuesta (A * A^T) y muestra el resultado.
 <p>
