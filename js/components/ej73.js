@@ -1,6 +1,6 @@
-const ej72 = /*html*/`
-<h1>Ejercicio 72: Ejercicio 15 Matrices</h1>
-<p>Dada una matriz cuadrada A (n x n), encuentra su matriz inversa si existe. Si no es inversible, explica por qué. Muestra el cálculo detallado y proporciona la matriz inversa si es posible</p>
+const ej73 = /*html*/`
+<h1>Ejercicio 73: Ejercicio 16 Matrices</h1>
+<p>Dada una matriz cuadrada A (n x n), calcula su determinante y encuentra el cofactor de un elemento específico de la matriz. Proporciona el valor del determinante y el cofactor.</p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
@@ -9,9 +9,9 @@ const ej72 = /*html*/`
           #include <cstdlib>
           #include <ctime>
           #include <iostream>
-
+          
           using namespace std;
-
+          
           int main() {
             double determinante = 1.0;
             // Semilla aleatoria basada en la hora actual
@@ -37,7 +37,7 @@ const ej72 = /*html*/`
             }
           
             // Imprimir la matriz original
-            cout << "Matriz Original:" << endl;
+            cout << endl << "Matriz Original:" << endl;
             for (int i = 0; i < n; i++) {
               cout << "| ";
               for (int j = 0; j < n; j++) {
@@ -46,8 +46,9 @@ const ej72 = /*html*/`
               cout << "|" << endl;
             }
           
-            // Realizar el cálculo de la matriz inversa
-            cout << "Para poder calcular el determinante de una matriz nxn se hace uso "
+            // Realizar el cálculo del determinante
+            cout << endl
+                 << "Para poder calcular el determinante de una matriz nxn se hace uso "
                     "del teorema de matriz triangular"
                  << endl
                  << "Este teorema dice que si una matriz es triangular superior o "
@@ -68,9 +69,9 @@ const ej72 = /*html*/`
               }
             }
             if (esTriangularSuperior) {
-              cout << "ESTA MATRIZ ES TRIANGULAR SUPERIOR" << endl;
+              cout << endl << "ESTA MATRIZ ES TRIANGULAR SUPERIOR" << endl;
             } else {
-              cout << "ESTA MATRIZ NO ES TRIANGULAR SUPERIOR" << endl;
+              cout << endl << "ESTA MATRIZ NO ES TRIANGULAR SUPERIOR" << endl;
             }
           
             // Comprobar si la matriz es triangular inferior
@@ -87,9 +88,9 @@ const ej72 = /*html*/`
               }
             }
             if (esTriangularInferior) {
-              cout << "ESTA MATRIZ ES TRIANGULAR INFERIOR" << endl;
+              cout << endl << "ESTA MATRIZ ES TRIANGULAR INFERIOR" << endl;
             } else {
-              cout << "ESTA MATRIZ NO ES TRIANGULAR INFERIOR" << endl;
+              cout << endl << "ESTA MATRIZ NO ES TRIANGULAR INFERIOR" << endl;
             }
           
             // Calcular el determinante
@@ -107,13 +108,15 @@ const ej72 = /*html*/`
                 }
               }
             
-              cout << "Debido a que la matriz no es triangular superior o inferior la "
+              cout << endl
+                   << "Debido a que la matriz no es triangular superior o inferior la "
                       "volveremos triangular inferior"
                    << endl;
               // Convertir la matriz en triangular inferior usando eliminación de Gauss
               for (int i = 0; i < n; i++) {
                 if (matrizTriang[i][i] == 0.0) {
-                  cout << "El determinante es cero. La matriz no es inversible." << endl;
+                  cout << endl
+                       << "El determinante es cero. La matriz no es inversible." << endl;
                   return 0;
                 }
                 for (int j = i + 1; j < n; j++) {
@@ -125,7 +128,7 @@ const ej72 = /*html*/`
                 determinante *= matrizTriang[i][i];
               }
             
-              cout << "Matriz triangulizada" << endl;
+              cout << endl << "Matriz triangulizada" << endl;
               for (int i = 0; i < n; i++) {
                 cout << "| ";
                 for (int j = 0; j < n; j++) {
@@ -136,103 +139,58 @@ const ej72 = /*html*/`
             }
           
             // Imprimir el determinante
-            cout << "Determinante de la matriz: " << determinante << endl
-                 << "Como se puede ver la matriz tiene determinante diferente de 0 por "
-                    "lo cual es invertible, para eso utilizaremos gauss-jordan"
-                 << endl
-                 << "Primero agregamos la matriz identidad a la derecha" << endl;
-            int doubleDim = 2 * n;
-            double matProcInv[doubleDim][doubleDim];
+            cout << endl << "Determinante de la matriz: " << determinante << endl;
           
-            for (int i = 0; i < n; i++) {
-              for (int j = 0; j < doubleDim; j++) {
-                if (j < n) {
-                  matProcInv[i][j] = matriz[i][j];
-                } else {
-                  if (i == (j - n)) {
-                    matProcInv[i][j] = 1;
-                  } else {
-                    matProcInv[i][j] = 0;
-                  }
-                }
-              }
-              /// Agrega la matriz identidad en la parte derecha
-            }
-            cout << "Matriz con la identidad" << endl;
-            for (int i = 0; i < n; i++) {
-              cout << "| ";
-              for (int j = 0; j < doubleDim; j++) {
-                cout << matProcInv[i][j] << " ";
-                if (j == n - 1) {
-                  cout << "|";
-                }
-              }
-              cout << "|" << endl;
-            }
-          
-            // Realizar operaciones de fila para obtener la matriz inversa
-            for (int i = 0; i < n; i++) {
-              double pivot = matProcInv[i][i];
-            
-              // Dividir la fila actual por el valor del pivote
-              for (int j = 0; j < 2 * n; j++) {
-                matProcInv[i][j] /= pivot;
-              }
-            
-              // Hacer ceros en las demás filas
-              for (int k = 0; k < n; k++) {
-                if (k != i) {
-                  double factor = matProcInv[k][i];
-                  for (int j = 0; j < 2 * n; j++) {
-                    matProcInv[k][j] -= factor * matProcInv[i][j];
-                  }
-                }
-              }
-            }
-          
-            // La matriz inversa se encuentra en la parte derecha de la matriz extendida
-            double matInv[n][n];
-            cout << "Matriz Inversa:" << endl;
-            for (int i = 0; i < n; i++) {
-              cout << "| ";
-              for (int j = 0; j < doubleDim; j++) {
-                cout << matProcInv[i][j] << " ";
-                if (j == n - 1) {
-                  cout << "|";
-                }
-                if (j >= n) {
-                  matInv[i][j - n] = matProcInv[i][j];
-                }
-              }
-              cout << "|" << endl;
-            }
-          
-            cout << "Siendo la matriz inversa entonces:" << endl;
-            for (int i = 0; i < n; i++) {
-              cout << "| ";
-              for (int j = 0; j < n; j++) {
-                cout << matInv[i][j] << " ";
-              }
-              cout << "|" << endl;
-            }
-          
+            // Mostrar matriz de cofactores
+            int fila, columna;
             cout << endl
-                 << "Para comprobar que efectivamente esta es la matriz inversa la "
-                    "multiplicamos por la original y comprobamos que de la identidad"
-                 << endl;
-            double matrizResultado[n][n];
-            for (int i = 0; i < n; i++) {
-              cout << "| ";
-              for (int j = 0; j < n; j++) {
-                matrizResultado[i][j] = 0;
-                for (int k = 0; k < n; k++) {
-                  matrizResultado[i][j] += matInv[i][k] * matriz[k][j];
-                }
-                  cout << matrizResultado[i][j] << " ";
-              }
-              cout << " |" << endl;
-            }
+                 << "Ingrese la fila del elemento del cual desea calcular el cofactor: ";
+            cin >> fila;
+            cout << "Ingrese la columna del elemento del cual desea calcular el "
+                    "cofactor: ";
+            cin >> columna;
           
+            if (fila >= 1 && fila <= n && columna >= 1 && columna <= n) {
+              // Ajustamos a índices base 0
+              fila--;
+              columna--;
+            
+              // Creamos una submatriz eliminando la fila y columna seleccionada
+              double submatriz[n - 1][n - 1];
+              int sub_i = 0, sub_j = 0;
+              for (int i = 0; i < n; i++) {
+                if (i == fila)
+                  continue;
+                for (int j = 0; j < n; j++) {
+                  if (j == columna)
+                    continue;
+                  submatriz[sub_i][sub_j] = matriz[i][j];
+                  sub_j++;
+                }
+                sub_i++;
+                sub_j = 0;
+              }
+            
+              // Calcular el cofactor
+              int cofactor = (fila + columna) % 2 == 0 ? 1 : -1;
+            
+              // Mostrar la submatriz resultante
+              cout << endl
+                   << "Submatriz excluyendo la fila " << fila + 1 << " y la columna "
+                   << columna + 1 << ":" << endl;
+              for (int i = 0; i < n - 1; i++) {
+                cout << "| ";
+                for (int j = 0; j < n - 1; j++) {
+                  cout << submatriz[i][j] << " ";
+                }
+                cout << "|" << endl;
+              }
+            
+              cout << "Cofactor de la posición (" << fila + 1 << ", " << columna + 1
+                   << "): " << cofactor * determinante << endl;
+            } else {
+              cout << "Posición fuera de los límites de la matriz." << endl;
+            }
           
             return 0;
           }
@@ -242,10 +200,10 @@ const ej72 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/ej72.png" id="img_res">
+    <img src="./../imgs/ej73.png" id="img_res">
 
-    <!-- <img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/ej72.png" id="img_res"> -->
+    <!-- <img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/ej73.png" id="img_res"> -->
 </div>
 
 `;
-export default ej72
+export default ej73

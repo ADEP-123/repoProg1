@@ -1,6 +1,6 @@
 const ej71 = /*html*/`
-<h1>Ejercicio 70: Ejercicio 13 Matrices</h1>
-<p>Multiplicacion por escalar</p>
+<h1>Ejercicio 71: Ejercicio 14 Matrices</h1>
+<p>Dadas dos matrices A y B de dimensiones (m x n) y (n x p), respectivamente, calcula el producto de matrices A * B. Proporciona el resultado en términos de una nueva matriz C. Asegúrate de que las dimensiones de las matrices sean adecuadas para la multiplicación y muestra el proceso paso a paso.</p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
