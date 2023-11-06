@@ -81,6 +81,13 @@ button{
 
 }
 
+#menu_button:hover{
+    color: #212121;
+    border: 1px solid #212121;
+    background-color: white;
+    transition: 1s;
+}
+
 /* 2. Contenido */
 #content_general{
     height: 85%;
@@ -177,6 +184,23 @@ pre{
     font-size: 1.3vh;
 }
 
+.github-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  transition: transform 0.2s; /* Transición para la animación */
+}
+
+.github-link:hover {
+  transform: scale(1.2); /* Aumenta el tamaño en un 20% al pasar el mouse */
+}
+
+/* Otros estilos para el enlace */
+.github-link .material-icons {
+  font-size: 24px; /* Tamaño de la fuente del ícono */
+  vertical-align: middle;
+}
+
 /* Pagina IMC */
 #div_info{
     text-align: justify;
@@ -241,4 +265,22 @@ pre{
 #cohete {
     width: 30vw;
     border-radius: 60%;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+  
+::-webkit-scrollbar-track {
+  background: #212121; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff; 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff65; 
+    transition: 1s;
 }
