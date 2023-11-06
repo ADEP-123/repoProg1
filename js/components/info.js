@@ -11,7 +11,8 @@ const infoHome = /*html*/`
     puede dar click en el boton home (el boton con forma de casa) en el panel superior izquierdo.
 </p>
 <div id="contact_info_div">
-    <span class="material-icons" id="img_profile">account_circle</span>
+    <a href="https://github.com/ADEP-123" target="_blank"><span class="material-icons"
+id="img_profile">account_circle</span></a>
     <p id="contact_info_text"><b>Andrés David Elizalde Peralta</b><br><i>01220371068</i></p>
 </div>
 `
