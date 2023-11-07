@@ -1,7 +1,7 @@
 const calif = /*html*/`
 <h1>Calculadora de promedio</h1>
 <div id=div_info>
-<img src="./../imgs/promedio.png" id="img_imc">
+<img src="imgs/promedio.png" id="img_imc">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/promedio.png" id="img_imc"> -->
 <p>Calculadora de promedio de 5 calificaciones, rellene los valores del apartado de abajo</p>
 </div>

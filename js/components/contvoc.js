@@ -1,7 +1,7 @@
 const contvoc = /*html*/`
 <h1>Conteo de vocales</h1>
 <div id=div_info>
-<img src="./../imgs/vocales.png" id="img_imc">
+<img src="imgs/vocales.png" id="img_imc">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/vocales.png" id="img_imc"> -->
 <p>Contemos las vocales de una frase!, escriba la frase en el apartado inferior</p>
 </div>

@@ -1,7 +1,7 @@
 const compPass = /*html*/`
 <h1>Comprobar Contraseña</h1>
 <div id=div_info>
-<img src="./../imgs/contr.png" id="img_imc">
+<img src="imgs/contr.png" id="img_imc">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/contr.png" id="img_imc"> -->
 <p>Ingrese la contraseña de la cuenta en el apartado inferior <br><i>Nota: Para efectos del ejercicio la contraseña es la que se muestra en el input</i></p>
 </div>

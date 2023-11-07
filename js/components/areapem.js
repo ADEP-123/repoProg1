@@ -1,7 +1,7 @@
 const areapem = /*html*/`
 <h1>Area y perimetro de un triangulo rectangulo</h1>
 <div id=div_info>
-<img src="./../imgs/triangulo.png" id="img_imc">
+<img src="imgs/triangulo.png" id="img_imc">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/triangulo.png" id="img_imc"> -->
 <p>En matemáticas, el teorema de Pitágoras es una relación en geometría euclidiana entre los tres lados de un triángulo rectángulo. Afirma que el área del cuadrado cuyo lado es la hipotenusa (el lado opuesto al ángulo recto) es igual a la suma de las áreas de los cuadrados cuyos lados son los catetos (los otros dos lados que no son la hipotenusa).</p>
 </div>
