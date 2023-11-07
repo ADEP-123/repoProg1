@@ -468,7 +468,7 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             e.stopPropagation();
             const moduleName = `${button.value}`;
-            
+
             import(`./components/${moduleName}.js`)
                 .then((modul) => {
                     info.innerHTML = modul.default;
@@ -487,6 +487,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             document.execCommand('copy');
                             document.body.removeChild(tempTextArea);
                             button.textContent = 'Copiado';
+                            setTimeout(() => { button.textContent = 'Copiar'; }, "2000")
                         });
                     });
 
