@@ -1,36 +1,39 @@
 import config from "../config.js";
 const ej10 = /*html*/`
 <h1>Ejercicio 10</h1>
-<p>Programa que reciba un lado de un triangulo y su hipotenusa y calcule el otro lado</p>
+<p>Desarrolle un programa que me permita generar una factura de un producto con el 19% de iva </p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
     <script type="text/x-c++src">
-        #include <iostream>
-        #include <cmath>
-
-        using namespace std;
-
-        int main() {
-            // Declaración de variables
-            double lado1, hipotenusa, lado2;
-        
-            // Entrada de datos
-            cout << "Ingrese la longitud de un lado del triángulo: ";
-            cin >> lado1;
-        
-            cout << "Ingrese la longitud de la hipotenusa: ";
-            cin >> hipotenusa;
-        
-            // Cálculo del segundo lado utilizando el teorema de Pitágoras
-            lado2 = sqrt(pow(hipotenusa, 2) - pow(lado1, 2));
-        
-            // Salida del resultado
-            cout << "El valor del segundo lado del triángulo es: " << lado2 << endl;
-        
-            return 0;
+      #include <cmath>
+      #include <iostream>
+      
+      using namespace std;
+      
+      int main() {
+        // Declaración de variables
+        string n;
+        double p;
+      
+        // Asignación de variables
+        cout << "Ingrese el nombre del producto: ";
+        cin >> n;
+      
+        cout << "Ingrese el precio del producto sin IVA: $";
+        cin >> p;
+      
+        if (p < 0) {
+          cout << "El precio del producto debe ser mayor a 0";
+        } else {
+          cout << "Factura:" << endl
+               << "Producto: " << n << endl
+               << "Precio sin IVA: " << p << endl
+               << "Precio con IVA(19%): $" << p * 1.19;
         }
+        return 0;
+      }
     </script>
     </code>
 </pre>

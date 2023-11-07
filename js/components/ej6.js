@@ -1,7 +1,7 @@
 import config from "../config.js";
 const ej6 = /*html*/`
 <h1>Ejercicio 6</h1>
-<p>Desarrolle un programa que me permita generar una factura de un producto con el 19% de iva </p>
+<p>El banco de la republica los ha seleccionado para que construyan un programa que permita calcular el valor en pesos de x número de dólares  en cierto momento del día consultando la TRM </p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
@@ -13,27 +13,30 @@ const ej6 = /*html*/`
       using namespace std;
       
       int main() {
-        // Declaración de variables
-        string n;
-        double p;
+        // Declaracion de variables
+        double d;
+        double trm;
       
-        // Asignación de variables
-        cout << "Ingrese el nombre del producto: ";
-        cin >> n;
+        // Asignacion de variables
+        cout << "Ingrese el numero de dolares que desea convertir: $";
+        cin >> d;
       
-        cout << "Ingrese el precio del producto sin IVA: $";
-        cin >> p;
-      
-        if (p < 0) {
-          cout << "El precio del producto debe ser mayor a 0";
+        if (d < 0) {
+          cout << "No puede existir una cantidad de dolares negativa ";
+        
         } else {
-          cout << "Factura:" << endl
-               << "Producto: " << n << endl
-               << "Precio sin IVA: " << p << endl
-               << "Precio con IVA(19%): $" << p * 1.19;
+          cout << "Ingrese la taza de cambio actual: ";
+          cin >> trm;
+          if (trm < 0) {
+            cout << "La taza de cambio no puede ser negativa";
+          } else {
+            cout << "La cantidad en pesos colombianos es : $" << (d * trm);
+          }
         }
+      
         return 0;
       }
+
     </script>
     </code>
 </pre>

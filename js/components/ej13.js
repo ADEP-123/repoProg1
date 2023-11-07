@@ -1,36 +1,37 @@
 import config from "../config.js";
 const ej13 = /*html*/`
 <h1>Ejercicio 13</h1>
-<p>Desarrollar un programa para hallar el valor absoluto de un numero x </p>
+<p>Programa que reciba ambos lados de un triangulo y calcule la hipotenusa </p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
     <script type="text/x-c++src">
-      #include <cmath>
       #include <iostream>
+      #include <cmath>
       
       using namespace std;
+      
       int main() {
+          // Declaración de variables
+          double lado1, lado2, hipotenusa;
       
-        // Declaracion de variables
-        float x;
-        float num;
+          // Entrada de datos
+          cout << "Ingrese la longitud del primer lado: ";
+          cin >> lado1;
       
-        // Asignacion de variables
-        cout << "Ingrese el numero a calcular el valor absoluto: ";
-        cin >> x;
+          cout << "Ingrese la longitud del segundo lado: ";
+          cin >> lado2;
       
-        if (x < 0) {
-          num = -x;
-        } else {
-          num = x;
-        }
+          // Cálculo de la hipotenusa usando el teorema de Pitágoras
+          hipotenusa = sqrt(pow(lado1, 2) + pow(lado2, 2));
       
-        cout << "El valor absoluto de " << x << " es " << num;
+          // Salida del resultado
+          cout << "La longitud de la hipotenusa es: " << hipotenusa << endl;
       
-        return 0;
+          return 0;
       }
+
     </script>
     </code>
 </pre>

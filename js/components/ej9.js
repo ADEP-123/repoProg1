@@ -1,37 +1,34 @@
 import config from "../config.js";
 const ej9 = /*html*/`
 <h1>Ejercicio 9</h1>
-<p>Programa que reciba ambos lados de un triangulo y calcule la hipotenusa </p>
+<p>Desarrolle un programa que convierta de kelvin a ºc</p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
     <script type="text/x-c++src">
-      #include <iostream>
       #include <cmath>
+      #include <iostream>
       
       using namespace std;
       
       int main() {
-          // Declaración de variables
-          double lado1, lado2, hipotenusa;
+        // Declaracion de variables
+        double k;
       
-          // Entrada de datos
-          cout << "Ingrese la longitud del primer lado: ";
-          cin >> lado1;
+        // Asignacion de variables
+        cout << "Ingrese la temperatura en grados kelvin: ";
+        cin >> k;
       
-          cout << "Ingrese la longitud del segundo lado: ";
-          cin >> lado2;
+        if(k<0){
+          cout<<"Los grados Kelvin no pueden ser negativos";
+        }else{  
+        cout << "Los grados Centigrados son: " << (k - 273.15);
+        }
       
-          // Cálculo de la hipotenusa usando el teorema de Pitágoras
-          hipotenusa = sqrt(pow(lado1, 2) + pow(lado2, 2));
       
-          // Salida del resultado
-          cout << "La longitud de la hipotenusa es: " << hipotenusa << endl;
-      
-          return 0;
+        return 0;
       }
-
     </script>
     </code>
 </pre>

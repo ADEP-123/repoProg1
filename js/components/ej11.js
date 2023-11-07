@@ -1,44 +1,38 @@
 import config from "../config.js";
 const ej11 = /*html*/`
 <h1>Ejercicio 11</h1>
-<p>Programa que calcule la nota final del curso de programación 1 </p>
+<p>Desarrollar un programa que reciba la edad y devuelva si es mayor o menor de edad </p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
     <script type="text/x-c++src">
-        #include <cmath>;
-        #include <iostream>;
-        using namespace std;
-        int main() {
-          // Declaracion de variables
-          float nota1;
-          float nota2;
-          float nota3;
-          // Asignacion de variables
-          cout << "Ingrese la primera nota: ";
-          cin >> nota1;
-          if (nota1 < 0 || nota1 > 5) {
-            cout << "la nota 1 debe estar entre 0 y 5";
-          } else {
-            cout << "Ingrese la segunda nota: ";
-            cin >> nota2;
-            if (nota2 < 0 || nota2 > 5) {
-              cout << "la nota 2 debe estar entre 0 y 5";
-            } else {
-              cout << "Ingrese la tercera nota: ";
-              cin >> nota3;
-              if (nota3 < 0 || nota3 > 5) {
-                cout << "la nota 3 debe estar entre y 5";
-              } else {
-                cout << "la nota final es: "
-                     << (nota1 * 0.3 + nota2 * 0.3 + nota3 * 0.4);
-              }
-            }
+      #include <cmath>
+      #include <iostream>
+      
+      using namespace std;
+      
+      int main() {
+        // Declaracion de variables
+        int edad;
+      
+        // Asignacion de variables
+        cout << "Ingrese la edad de la persona: ";
+        cin >> edad;
+      
+        if(edad>=0 && edad<=118){
+          if(edad>=18){
+            cout << "La persona es mayor de edad";
+          }else{
+            cout << "La persona es menor de edad";
           }
-          return 0;
+        }else{  
+        cout << "Edad ingresada invalida";
         }
-
+      
+      
+        return 0;
+      }
     </script>
     </code>
 </pre>

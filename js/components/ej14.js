@@ -1,67 +1,36 @@
 import config from "../config.js";
 const ej14 = /*html*/`
 <h1>Ejercicio 14</h1>
-<p>Desarrollar el programa para que al ingresar un numero me devuelva el día de la semana</p>
+<p>Programa que reciba un lado de un triangulo y su hipotenusa y calcule el otro lado</p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
     <script type="text/x-c++src">
-      #include <cmath> 
-      #include <iostream> 
+        #include <iostream>
+        #include <cmath>
 
-      using namespace std; 
-      int main() { 
-      
-        // Declaracion de variables 
-        int num; 
-        string dia; 
-      
-        // Asignacion de variables 
-        cout << "Ingrese el numero del dia: "; 
-        cin >> num; 
-      
-        switch (num) { 
-        case 1: 
-          dia = "lunes"; 
-          break; 
+        using namespace std;
 
-        case 2: 
-          dia = "martes"; 
-          break; 
+        int main() {
+            // Declaración de variables
+            double lado1, hipotenusa, lado2;
         
-        case 3: 
-          dia = "miercoles"; 
-          break; 
+            // Entrada de datos
+            cout << "Ingrese la longitud de un lado del triángulo: ";
+            cin >> lado1;
         
-        case 4: 
-          dia = "jueves"; 
-          break; 
+            cout << "Ingrese la longitud de la hipotenusa: ";
+            cin >> hipotenusa;
         
-        case 5: 
-          dia = "viernes"; 
-          break; 
+            // Cálculo del segundo lado utilizando el teorema de Pitágoras
+            lado2 = sqrt(pow(hipotenusa, 2) - pow(lado1, 2));
         
-        case 6: 
-          dia = "sabado"; 
-          break; 
+            // Salida del resultado
+            cout << "El valor del segundo lado del triángulo es: " << lado2 << endl;
         
-        case 7: 
-          dia = "domingo"; 
-          break; 
-        
-        default: 
-          cout << "numero invalido"; 
-        } 
-      
-        if (num > 0 & num <= 7) { 
-          cout << "El dia es: " << dia; 
-        } else{
-          cout << "numero invalido";
+            return 0;
         }
-      
-        return 0; 
-      } 
     </script>
     </code>
 </pre>

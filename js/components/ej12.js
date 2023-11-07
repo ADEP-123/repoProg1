@@ -1,7 +1,7 @@
 import config from "../config.js";
 const ej12 = /*html*/`
 <h1>Ejercicio 12</h1>
-<p>Programa que al ingresar 3 números los ordene y los imprima preguntando de mayor a menor o de menor a mayor</p>
+<p>Programa que reciba el año de nacimiento de una persona y calcule si es mayor o menor de edad</p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
@@ -9,99 +9,29 @@ const ej12 = /*html*/`
     <script type="text/x-c++src">
       #include <cmath>
       #include <iostream>
-      using namespace std;
-
-      int main() {
       
+      using namespace std;
+      
+      int main() {
         // Declaracion de variables
-        float num1;
-        float num2;
-        float num3;
-        int orden;
+        int añoNac;
+        int edad;
       
         // Asignacion de variables
-        cout << "Ingrese el primer numero" << endl;
-        cin >> num1;
+        cout << "Ingrese su año de nacimiento: ";
+        cin >> añoNac;
       
-        cout << "Ingrese el segundo numero" << endl;
-        cin >> num2;
-      
-        cout << "Ingrese el tercer numero" << endl;
-        cin >> num3;
-      
-        cout << "Ingrese como desea ordenarlo" << endl
-             << "1. Si de mayor a menor" << endl
-             << "2. Si de menor a mayor" << endl;
-        cin >> orden;
-      
-        while (orden != 1 && orden != 2) {
-          cout << "El orden es incorrecto, ingrese el orden segun las indicaciones:"
-               << endl
-               << "1. Si de mayor a menor" << endl
-               << "2. Si de menor a mayor" << endl;
-          cin >> orden;
+        if(añoNac>=1905 && añoNac<=2023){
+          edad = 2023 - añoNac;
+          if(edad>=18){
+            cout << "La persona es mayor de edad";
+          }else{
+            cout << "La persona es menor de edad";
+          }
+        }else{  
+        cout << "Año ingresado invalido";
         }
       
-        if (orden == 1) {
-          if (num1 > num2) {
-            if (num2 > num3) {
-              cout << "Los numeros ordenados son " << num1 << " " << num2 << " "
-                   << num3;
-            } else {
-              if (num3 > num1) {
-                cout << "Los numeros ordenados son " << num3 << " " << num1 << ""
-                     << num2;
-              } else {
-                cout << "Los numeros ordenados son " << num1 << " " << num3 << " "
-                     << num2;
-              }
-            }
-          
-          } else {
-            if (num1 > num3) {
-              cout << "Los numeros ordenados son " << num2 << " " << num1 << " "
-                   << num3;
-            } else {
-              if (num3 > num2) {
-                cout << "Los numeros ordenados son " << num3 << " " << num2 << " "
-                     << num1;
-              } else {
-                cout << "Los numeros ordenados son " << num2 << " " << num3 << " "
-                     << num1;
-              }
-            }
-          }
-        
-        } else {
-          if (num1 < num2) {
-            if (num2 < num3) {
-              cout << "Los numeros ordenados son " << num1 << " " << num2 << " "
-                   << num3;
-            } else {
-              if (num3 < num1) {
-                cout << "Los numeros ordenados son " << num3 << " " << num1 << ""
-                     << num2;
-              } else {
-                cout << "Los numeros ordenados son " << num1 << " " << num3 << " "
-                     << num2;
-              }
-            }
-          
-          } else {
-            if (num1 < num3) {
-              cout << "Los numeros ordenados son " << num2 << " " << num1 << " "
-                   << num3;
-            } else {
-              if (num3 < num2) {
-                cout << "Los numeros ordenados son " << num3 << " " << num2 << " "
-                     << num1;
-              } else {
-                cout << "Los numeros ordenados son " << num2 << " " << num3 << " "
-                     << num1;
-              }
-            }
-          }
-        }
       
         return 0;
       }

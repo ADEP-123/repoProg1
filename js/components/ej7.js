@@ -1,38 +1,35 @@
 import config from "../config.js";
 const ej7 = /*html*/`
 <h1>Ejercicio 7</h1>
-<p>Desarrollar un programa que reciba la edad y devuelva si es mayor o menor de edad </p>
+<p>Pida al usuario que ingrese la cantidad de días e imprima los minutos y segundos</p>
 <div id="codigo">
 <pre class="code-container">
     <button class="copy-button">Copiar</button>
     <code class="language-cpp">
     <script type="text/x-c++src">
-      #include <cmath>
-      #include <iostream>
+    #include <cmath>
+    #include <iostream>
+    
+    using namespace std;
+    
+    int main() {
+      // Declaracion de variables
+      double d;
+    
+      // Asignacion de variables
+      cout << "Ingrese la cantidad de dias: ";
+      cin >> d;
+    
+      if (d < 0) {
+        cout << "No existe una cantidad de dias menor que 0";
       
-      using namespace std;
-      
-      int main() {
-        // Declaracion de variables
-        int edad;
-      
-        // Asignacion de variables
-        cout << "Ingrese la edad de la persona: ";
-        cin >> edad;
-      
-        if(edad>=0 && edad<=118){
-          if(edad>=18){
-            cout << "La persona es mayor de edad";
-          }else{
-            cout << "La persona es menor de edad";
-          }
-        }else{  
-        cout << "Edad ingresada invalida";
-        }
-      
-      
-        return 0;
+      } else {
+        cout << "La cantidad de minutos es: " << (d * 24 * 60) << endl
+             << "La cantidad de segundos es: " << (d * 24 * 60 * 60);
       }
+    
+      return 0;
+    }
     </script>
     </code>
 </pre>
