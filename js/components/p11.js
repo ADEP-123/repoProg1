@@ -2,7 +2,7 @@ import config from "../config.js";
 const p11 = /*html*/`
 <h1>Parcial 1: Ejercicio 1</h1>
 <p>A partir de los siguientes datos ingresados por teclado construya un programa para calcular:</p>
-<img src="./../imgs/p1ej1.png" id="img_res">
+<img src="imgs/p1ej1.png" id="img_res">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p1ej1.png" id="img_res"> -->
 <p>Con los siguientes valores de prueba:<br>
 r = 5  h = 7 <br>
@@ -93,7 +93,7 @@ Y adicional a ello, calcule cual es el mayor volumen y área del sólido, es dec
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/p11.png" id="img_res">
+    <img src="imgs/p11.png" id="img_res">
     <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p11.png" id="img_res"> -->
 </div>
 

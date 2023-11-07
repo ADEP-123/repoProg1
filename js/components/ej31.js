@@ -52,10 +52,10 @@ const ej31 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/ej31.png" id="img_res">
-    <img src="./../imgs/ej31_2.png" id="img_res">
-    <img src="./../imgs/ej31_3.png" id="img_res">
-    <img src="./../imgs/ej31_4.png" id="img_res">
+    <img src="imgs/ej31.png" id="img_res">
+    <img src="imgs/ej31_2.png" id="img_res">
+    <img src="imgs/ej31_3.png" id="img_res">
+    <img src="imgs/ej31_4.png" id="img_res">
     <!-- <img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/ej31.png" id="img_res"> -->
     <!-- <img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/ej31_2.png" id="img_res"> -->
     <!-- <img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/ej31_3.png" id="img_res"> -->

@@ -2,7 +2,7 @@ import config from "../config.js";
 const p12 = /*html*/`
 <h1>Parcial 1: Ejercicio 2</h1>
 <p>A partir de los siguientes datos ingresados en código construya un programa para calcular el área y el volumen total de un cono circular truncado o tronco de cono circular recto: </p>
-<img src="./../imgs/p1ej2.png" id="img_res">
+<img src="imgs/p1ej2.png" id="img_res">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p1ej2.png" id="img_res"> -->
 <div id="codigo">
 <pre class="code-container">
@@ -81,7 +81,7 @@ const p12 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/p12.png" id="img_res">
+    <img src="imgs/p12.png" id="img_res">
     <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p12.png" id="img_res"> -->
 </div>
 

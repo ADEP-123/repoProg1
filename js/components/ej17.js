@@ -37,7 +37,7 @@ const ej17 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/ej17.png" id="img_res">
+    <img src="imgs/ej17.png" id="img_res">
     <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/ej17.png" id="img_res"> -->
 </div>
 

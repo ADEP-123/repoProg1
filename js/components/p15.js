@@ -2,7 +2,7 @@ import config from "../config.js";
 const p15 = /*html*/`
 <h1>Parcial 1: Ejercicio 5</h1>
 <p>Diseña un programa que solicite a un usuario su peso, altura, edad y nivel de actividad física. Luego, calcula y muestra el consumo calórico diario recomendado para mantener su peso actual teniendo en cuenta el siguiente gráfico:</p>
-<img src="./../imgs/p1ej5.png" id="img_res">
+<img src="imgs/p1ej5.png" id="img_res">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p1ej5.png" id="img_res"> -->
 <p>¿Cuál es la aceleración de cada masa?
 <br> ¿Qué fuerza ejercerá cada caja sobre la otra?
@@ -130,7 +130,7 @@ const p15 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/p15.png" id="img_res">
+    <img src="imgs/p15.png" id="img_res">
     <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p15.png" id="img_res"> -->
 </div>
 

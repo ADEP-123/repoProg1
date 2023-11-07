@@ -1,7 +1,7 @@
 const areapem = /*html*/`
 <h1>Calculadora de valor total para una heladeria</h1>
 <div id=div_info>
-    <img src="./../imgs/heladeria.png" id="img_imc">
+    <img src="imgs/heladeria.png" id="img_imc">
     <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/heladeria.png" id="img_imc"> -->
     <p>Una tienda de helado da un descuento por compra a sus clientes con membresía dependiendo de su tipo, sólo existen tres tipos de membresía, tipo A, tipo B y tipo C. Los descuentos son los siguientes:</p>
     <ul>

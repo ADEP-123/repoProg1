@@ -1,7 +1,7 @@
 const tablMul = /*html*/`
 <h1>Tablas de multiplicar</h1>
 <div id=div_info>
-<img src="./../imgs/tablasmult.png" id="img_imc">
+<img src="imgs/tablasmult.png" id="img_imc">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/tablasmult.png" id="img_imc"> -->
 <p>Calculadora de tablas de multiplicar</p>
 </div>
@@ -17,7 +17,7 @@ const tablMul = /*html*/`
 </div>
 <div id="result_div">
 <h1>Tabla de multiplicar</h1>
-<img src="./../imgs/loading.gif" id="loading">
+<img src="imgs/loading.gif" id="loading">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/loading.gif" id="loading"> -->
 </div>
 

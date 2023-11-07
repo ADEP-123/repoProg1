@@ -4,7 +4,7 @@ const p14 = /*html*/`
 <p>Construya un programa que me calcule teniendo en cuenta dos cajas de 10 y 15 kg de masa respectivamente que se encuentran apoyadas sobre una superficie horizontal sin rozamiento, una apoyada en la otra. 
 Si se empuja el conjunto con una fuerza de 55 N. 
 </p>
-<img src="./../imgs/p1ej4.png" id="img_res">
+<img src="imgs/p1ej4.png" id="img_res">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p1ej4.png" id="img_res"> -->
 <p>¿Cuál es la aceleración de cada masa?
 <br> ¿Qué fuerza ejercerá cada caja sobre la otra?
@@ -81,7 +81,7 @@ Si se empuja el conjunto con una fuerza de 55 N.
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/p14.png" id="img_res">
+    <img src="imgs/p14.png" id="img_res">
     <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p14.png" id="img_res"> -->
 </div>
 

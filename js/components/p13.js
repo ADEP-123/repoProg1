@@ -2,7 +2,7 @@ import config from "../config.js";
 const p13 = /*html*/`
 <h1>Parcial 1: Ejercicio 3</h1>
 <p>El efecto doppler es una variación aparente del efecto ondulatorio debido al movimiento entre el observador y el emisor:   </p>
-<img src="./../imgs/p1ej3.png" id="img_res">
+<img src="imgs/p1ej3.png" id="img_res">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p1ej3.png" id="img_res"> -->
 <p>De acuerdo a la siguiente ilustración, simule el escenario en el que:
 <br> El emisor se acerca al receptor
@@ -180,7 +180,7 @@ const p13 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/p13.png" id="img_res">
+    <img src="imgs/p13.png" id="img_res">
     <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p13.png" id="img_res"> -->
 </div>
 

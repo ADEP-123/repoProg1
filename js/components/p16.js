@@ -2,7 +2,7 @@ import config from "../config.js";
 const p16 = /*html*/`
 <h1>Parcial 1: Ejercicio 6</h1>
 <p>Una entidad de salud lo ha contratado para que usted desarrolle un programa que permita al médico calcular y al usuario llevar control de su índice de masa corporal, el cuál es un indicador confiable de la gordura y se usa para identificar las categorías de peso que pueden llevar asociados problemas de salud, el cálculo viene dado a partir del peso y la estatura de la siguiente manera:</p>
-<img src="./../imgs/p1ej6.png" id="img_res">
+<img src="imgs/p1ej6.png" id="img_res">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p1ej6.png" id="img_res"> -->
 <p>¿Cuál es la aceleración de cada masa?
 <br> ¿Qué fuerza ejercerá cada caja sobre la otra?
@@ -116,7 +116,7 @@ const p16 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/p16.png" id="img_res">
+    <img src="imgs/p16.png" id="img_res">
     <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p16.png" id="img_res"> -->
 </div>
 

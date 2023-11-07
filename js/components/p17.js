@@ -2,7 +2,7 @@ import config from "../config.js";
 const p17 = /*html*/`
 <h1>Parcial 1: Ejercicio 7</h1>
 <p>Una versión mejorada del índice de masa corporal es la variación del peso cuando una mujer se encuentra en estado de gestación, ésta viene dada por algunas alteraciones en el programa anterior.</p>
-<img src="./../imgs/p1ej7.png" id="img_res">
+<img src="imgs/p1ej7.png" id="img_res">
 <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p1ej7.png" id="img_res"> -->
 <div id="codigo">
 <pre class="code-container">
@@ -136,7 +136,7 @@ const p17 = /*html*/`
 </div>
 <div id=div_img_res>
     <h5>Resultado</h5>
-    <img src="./../imgs/p17.png" id="img_res">
+    <img src="imgs/p17.png" id="img_res">
     <!--<img src="https://adepfolder.000webhostapp.com/Programacion%201/imgs/p17.png" id="img_res"> -->
 </div>
 
